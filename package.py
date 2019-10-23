@@ -1,6 +1,6 @@
 name = "3delight"
 
-version = "1.6.13"
+version = "1.6.14"
 
 authors = [
     "DNA Research"
