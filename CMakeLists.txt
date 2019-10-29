@@ -1,8 +1,6 @@
 CMAKE_MINIMUM_REQUIRED(VERSION 3.0)
 PROJECT(3delight)
 
-include(ExternalProject)
-
 option(CLEAN_BUILD "Clean the build directory when running CMake." ON)
 option(CLEAN_INSTALL "Clean the install directory when running CMake." ON)
 
