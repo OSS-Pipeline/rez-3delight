@@ -1,0 +1,16 @@
+{
+    "env": [
+        {
+            "DELIGHT": "@INSTALL_PATH@"
+        },
+        {
+            "HOUDINI_PATH": "@INSTALL_PATH@/houdini/17.5"
+        },
+        {
+            "HOUDINI_SCRIPT_PATH": "@INSTALL_PATH@/houdini/17.5/scripts"
+        },
+        {
+            "HOUDINI_SOHO_PATH": "@INSTALL_PATH@/houdini/17.5/soho"
+        }
+    ]
+}
