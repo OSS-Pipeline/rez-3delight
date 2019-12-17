@@ -1,6 +1,6 @@
 name = "3delight"
 
-version = "1.6.17"
+version = "1.7.15"
 
 authors = [
     "DNA Research"
@@ -42,11 +42,6 @@ def commands():
     env.PATH.prepend("{root}/bin")
     env.LD_LIBRARY_PATH.prepend("{root}/lib")
     env.DELIGHT.append("{root}")
-    env.MAYA_MODULE_PATH.append("{root}/maya/modules")
-    env.MAYA_RENDER_DESC_PATH.append("{root}/maya/render_desc")
-    env.KATANA_RESOURCES.append("{root}/3DelightForKatana")
-    env.DEFAULT_RENDERER.set("dl")
-    env.HOUDINI_PATH.append("{root}/houdini/17.5")
 
     # Helper environment variables.
     env.DELIGHT_BINARY_PATH.set("{root}/bin")

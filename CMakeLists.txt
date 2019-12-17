@@ -23,7 +23,7 @@ else()
 
     include(ProcessorCount)
 
-    set(PROJECT_VERSION 1.6.17)
+    set(PROJECT_VERSION 1.7.15)
     set(INSTALL_PATH ${CMAKE_INSTALL_PREFIX}/${CMAKE_PROJECT_NAME}/${PROJECT_VERSION})
     set(ARCHIVE_PATH $ENV{BUILD_ARCHIVE_PATH})
     set(TMP_PATH $ENV{BUILD_TMP_PATH})
@@ -83,6 +83,22 @@ if (${CLEAN_INSTALL})
         file(REMOVE_RECURSE ${INSTALL_PATH_CHILD})
     endforeach()
 endif()
+
+# TODO
+configure_file(config/houdini/17.5/3Delight_for_Houdini.json.in config/houdini/17.5/3Delight_for_Houdini.json @ONLY)
+configure_file(config/houdini/18.0/3Delight_for_Houdini.json.in config/houdini/18.0/3Delight_for_Houdini.json @ONLY)
+
+# TODO
+rez_install_files(
+    ${CMAKE_CURRENT_BINARY_DIR}/config/houdini/17.5/3Delight_for_Houdini.json
+    RELATIVE build/platform-linux/config/houdini/17.5
+    DESTINATION houdini/17.5
+)
+rez_install_files(
+    ${CMAKE_CURRENT_BINARY_DIR}/config/houdini/18.0/3Delight_for_Houdini.json
+    RELATIVE build/platform-linux/config/houdini/18.0
+    DESTINATION houdini/18.0
+)
 
 # We install the project.
 install(
